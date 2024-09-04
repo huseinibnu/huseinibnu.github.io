@@ -783,6 +783,15 @@ video {
   height: 100%;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
+}
+
 .w-14 {
   width: 3.5rem;
 }
@@ -1112,18 +1121,6 @@ video {
 
 .pt-24 {
   padding-top: 6rem;
-}
-
-.pt-36 {
-  padding-top: 9rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
 }
 
 .pt-32 {
@@ -1546,10 +1543,6 @@ body {
     padding-bottom: 2rem;
   }
 
-  .sm\:pt-32 {
-    padding-top: 8rem;
-  }
-
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1559,6 +1552,10 @@ body {
 @media (min-width: 768px) {
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:pt-16 {
+    padding-top: 4rem;
   }
 
   .md\:text-lg {
@@ -1637,10 +1634,6 @@ body {
 
   .lg\:pt-10 {
     padding-top: 2.5rem;
-  }
-
-  .lg\:pt-16 {
-    padding-top: 4rem;
   }
 
   .lg\:text-2xl {

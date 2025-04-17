@@ -143,7 +143,7 @@
               <a
                 href="https://instagram.com/mahmudhuseinibnu"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
                 <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Instagram</title>
@@ -157,7 +157,7 @@
               <a
                 href="https://linkedin.com/in/husein-ibnu-mahmud"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
                 <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>LinkedIn</title>
@@ -171,7 +171,7 @@
               <a
                 href="mailto:husein.mahmud03@gmail.com"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
                 <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Gmail</title>
@@ -185,7 +185,7 @@
               <a
                 href="https://drive.google.com/file/d/1wLtutIK8tdbdxs3Lm6jEXDYgbhtr7HTe/view?usp=sharing"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
                 <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Curriculum Vitae</title>
@@ -240,11 +240,14 @@
             <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
               <img src="dist/img/clients/tensorflow.svg" alt="TensorFlow" />
             </a>
-            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
+            <!-- <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
               <img src="dist/img/clients/keras.svg" alt="Keras" class="h-8"/>
-            </a>
+            </a> -->
             <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
               <img src="dist/img/clients/pytorch.svg" alt="PyTorch"/>
+            </a>
+            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
+              <img src="dist/img/clients/power_bi.svg" alt="Power BI"/>
             </a>
           </div>
         </div>
@@ -256,18 +259,98 @@
     <section id="portfolio" class="bg-slate-100 pt-24 pb-16 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto mb-16 max-w-xl text-center">
+          <div class="mx-auto mb-12 max-w-xl text-center">
             <h4 class="mb-2 text-xl font-semibold text-primary">Portfolio</h4>
             <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Latest Project</h2>
             <!-- <p class="text-md font-medium text-secondary md:text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus porro consequuntur alias, commodi nemo enim aliquam ipsam obcaecati? Assumenda, ipsam?
             </p> -->
+            <div class="mb-6 overflow-x-auto">
+              <div class="bg-slate-300 rounded-[25px] text-sm lg:text-base font-medium flex flex-nowrap justify-start gap-2 lg:gap-4 min-w-max w-fit mx-auto" id="portfolio-tabs">
+                <button class="tab-btn active text-dark bg-slate-300 hover:text-white hover:bg-gray-500 px-4 py-2 rounded-full transition" data-tab="all">All</button>
+                <button class="tab-btn text-dark bg-slate-300 hover:text-white hover:bg-gray-500 px-4 py-2 rounded-full transition" data-tab="ml">Machine Learning</button>
+                <button class="tab-btn text-dark bg-slate-300 hover:text-white hover:bg-gray-500 px-4 py-2 rounded-full transition" data-tab="dashboard">Dashboard</button>
+                <button class="tab-btn text-dark bg-slate-300 hover:text-white hover:bg-gray-500 px-4 py-2 rounded-full transition" data-tab="da">Data Analytics</button>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="flex w-full flex-wrap justify-center px-2 xl:mx-auto xl:w-15/16">  
+          <!-- Cohort Analysis -->
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
+                  <div class="w-full">
+                      <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/Cohort Analysis.png" alt="Cohort-Based Insights on Customer Loyalty" />
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-primary/90 group-hover:via-primary/80 group-hover:to-dark/90"></div>
+                  <div class="absolute inset-0 flex translate-y-[70%] flex-col items-center justify-center px-4 text-center transition-all duration-500 group-hover:translate-y-0">
+                      <a href="https://colab.research.google.com/drive/1Q6zdEb9FF319K7LDUglTlik28tLVpXh2?usp=sharing" target="_blank">
+                          <button class="rounded-full bg-neutral-900 py-2 px-3 font-com text-sm capitalize text-white shadow shadow-black/60">
+                              Try it now!
+                          </button>
+                      </a>
+                  </div>
+              </div>
+            </div>
+            <h3 class="mt-5 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Cohort-Based Insights on Customer Loyalty</h3>
+            <p class="mt-4 text-sm sm:text-base font-medium text-secondary text-justify">
+              Understand customer behavior over time through cohort-based retention analysis segmented by join month, quarter, and initial purchase activity. Use these insights to improve customer loyalty and long-term value.
+            </p> 
+          </div>
+          <!-- Cohort Analysis -->
+          
+          <!-- RFM Analysis -->
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
+                  <div class="w-full">
+                      <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/RFM Analysis.png" alt="Know Your Shoppers: An RFM-Based Customer Intelligence" />
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-primary/90 group-hover:via-primary/80 group-hover:to-dark/90"></div>
+                  <div class="absolute inset-0 flex translate-y-[70%] flex-col items-center justify-center px-4 text-center transition-all duration-500 group-hover:translate-y-0">
+                      <a href="https://colab.research.google.com/drive/14zW_zVJtzaKWMh1wGkzkyDHMxQ9XgZcU?usp=sharing" target="_blank">
+                          <button class="rounded-full bg-neutral-900 py-2 px-3 font-com text-sm capitalize text-white shadow shadow-black/60">
+                              Try it now!
+                          </button>
+                      </a>
+                  </div>
+              </div>
+            </div>
+            <h3 class="mt-5 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Know Your Shoppers: An RFM-Based Customer Intelligence</h3>
+            <p class="mt-4 text-sm sm:text-base font-medium text-secondary text-justify">
+              Understand your customers better through RFM analysis to segment, target, and retain high-value users effectively.
+            </p> 
+          </div>
+          <!-- RFM Analysis -->
+          
+          <!-- Market Basket Analysis -->
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
+                  <div class="w-full">
+                      <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/Market Basket Analysis.png" alt="Product Recommendation with Market Basket Analysis" />
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-primary/90 group-hover:via-primary/80 group-hover:to-dark/90"></div>
+                  <div class="absolute inset-0 flex translate-y-[70%] flex-col items-center justify-center px-4 text-center transition-all duration-500 group-hover:translate-y-0">
+                      <a href="https://colab.research.google.com/drive/1CgaNWktTC7pqXd4Qd2QFzbIo5DadDUTJ?usp=sharing" target="_blank">
+                          <button class="rounded-full bg-neutral-900 py-2 px-3 font-com text-sm capitalize text-white shadow shadow-black/60">
+                              Try it now!
+                          </button>
+                      </a>
+                  </div>
+              </div>
+            </div>
+            <h3 class="mt-5 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Product Recommendation with Market Basket Analysis</h3>
+            <p class="mt-4 text-sm sm:text-base font-medium text-secondary text-justify">
+              Boost product sales by uncovering hidden purchase patterns and recommending items based on customer buying behavior using Market Basket Analysis.
+            </p> 
+          </div>
+          <!-- Market Basket Analysis -->
+          
           <!-- Battery Insight -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -287,12 +370,12 @@
             <p class="mt-4 text-sm sm:text-base font-medium text-secondary text-justify">
               Battery Insight transforms Windows battery reports into actionable insights, helping users understand usage trends, 
               capacity decline, and predict future performance with data analysis and machine learning.
-            </p>
+            </p> 
           </div>
           <!-- Battery Insight -->
 
           <!-- ResBuddy -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -314,7 +397,7 @@
           <!-- ResBuddy -->
           
           <!-- Superstore Dashboard -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -336,7 +419,7 @@
           <!-- Superstore Dashboard -->
           
           <!-- DEDEL -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -358,7 +441,7 @@
           <!-- DEDEL -->
 
           <!-- Churn Prediction Dashboard -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -380,7 +463,7 @@
           <!-- Churn Prediction Dashboard -->
 
           <!-- Report -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -402,7 +485,7 @@
           <!-- Report -->
 
           <!-- Fishio -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -424,7 +507,7 @@
           <!-- Fishio -->
 
           <!-- Produksi Beras -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -446,7 +529,7 @@
           <!-- Produksi Beras -->
 
           <!-- Heart Disease -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5">
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -716,13 +799,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       // Animasi bagian portofolio
-      const portfolioItems = document.querySelectorAll('.portfolio-item');
-      portfolioItems.forEach((item, i) => {
-        item.dataset.aos = 'flip-left';
-        item.dataset.aosDelay = (i + 1) * 100 + '';
-        item.dataset.aosOffset = '70';
-        item.dataset.aosDuration = '1000';
-      });
+      // const portfolioItems = document.querySelectorAll('.portfolio-item');
+      // portfolioItems.forEach((item) => {
+      //   item.dataset.aos = 'flip-left';
+      //   item.dataset.aosDelay = '100';
+      //   item.dataset.aosOffset = '70';
+      //   item.dataset.aosDuration = '800';
+      // });
 
       const blogItems = document.querySelectorAll('.blog-item');
       blogItems.forEach((item, i) => {
@@ -784,6 +867,52 @@
       });
     </script>    
     <!-- Akhir script gsap -->
-
+    
+    <!-- Awal script tab portfolio -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+    
+        // Setel tombol "All" aktif pada awal
+        const firstTab = document.querySelector(".tab-btn[data-tab='all']");
+        if (firstTab) {
+          firstTab.classList.add("active", "bg-gray-500", "text-white");
+        }
+    
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Reset semua tombol
+            tabButtons.forEach((btn) => {
+              btn.classList.remove("active", "bg-gray-500", "text-white");
+            });
+    
+            // Tambahkan class aktif ke tombol yang diklik
+            button.classList.add("active", "bg-gray-500", "text-white");
+    
+            const selectedTab = button.getAttribute("data-tab");
+    
+            // Tampilkan item sesuai kategori
+            portfolioItems.forEach((item) => {
+              const category = item.getAttribute("data-category");
+    
+              // Pastikan data-category ada dan bukan null
+              if (category) {
+                const categories = category.split(" ");
+                if (selectedTab === "all" || categories.includes(selectedTab)) {
+                  item.classList.remove("hidden");
+                } else {
+                  item.classList.add("hidden");
+                }
+              } else {
+                // Jika data-category tidak ada, sembunyikan item
+                item.classList.add("hidden");
+              }
+            });
+          });
+        });
+      });
+    </script>    
+    <!-- Akhir script tab portfolio -->
   </body>
 </html>

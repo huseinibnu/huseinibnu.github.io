@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "npx @tailwindcss/cli -i ./dist/css/input.css -o ./dist/css/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./dist/css/input.css -o ./dist/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.4.10"
+    "tailwindcss": "^3.4.17"
   }
 }

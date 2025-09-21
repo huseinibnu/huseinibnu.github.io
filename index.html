@@ -278,29 +278,32 @@
         </div>
 
         <div class="flex w-full flex-wrap justify-center px-2 xl:mx-auto xl:w-15/16">  
-          <!-- Automatic Colorization -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
+          <!-- Vehicle Detection and Counting -->
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
-                      <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/Automatic Colorization.png" alt="Automatic Landscape Colorization using Deep Learning" />
+                      <video id="demoVideo" class="h-full w-full object-cover" autoplay loop muted playsinline>
+                        <source src="dist/img/portfolio/VehicleCountDemo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-primary/90 group-hover:via-primary/80 group-hover:to-dark/90"></div>
                   <div class="absolute inset-0 flex translate-y-[70%] flex-col items-center justify-center px-4 text-center transition-all duration-500 group-hover:translate-y-0">
-                      <a href="https://colab.research.google.com/drive/1tXaHpmQ1UsZaySUryj5jXtjP6G9Cu22u?usp=sharing" target="_blank">
+                      <a href="#" target="_blank">
                           <button class="rounded-full bg-neutral-900 py-2 px-3 font-com text-sm capitalize text-white shadow shadow-black/60">
-                              Crafted with code—explore!
+                              Built with care—try it!
                           </button>
                       </a>
                   </div>
               </div>
             </div>
-            <h3 class="mt-5 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Automatic Image Colorization with U-Net Autoencoder</h3>
+            <h3 class="mt-5 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Accelerated Vehicle Detection with OpenVINO</h3>
             <p class="mt-4 text-sm sm:text-base font-medium text-secondary text-justify">
-              Bring black-and-white images to life by automatically generating realistic colors using a deep learning model based on the U-Net autoencoder architecture.
+              Optimized inference of YOLOv11 for real-time vehicle detection and counting, achieving up to 3× faster performance on CPU and GPU compared to baseline models.
             </p> 
           </div>
-          <!-- Automatic Colorization -->
+          <!-- Vehicle Detection and Counting -->
           
           <!-- Cohort Analysis -->
           <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
@@ -373,13 +376,17 @@
             </p> 
           </div>
           <!-- Market Basket Analysis -->
-          
+
           <!-- PredictaCycle -->
           <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
-                      <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/PredictaCycle.png" alt="PredictaCycle" />
+                      <!-- <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/PredictaCycle.png" alt="PredictaCycle" /> -->
+                      <video id="demoVideo" class="h-full w-full object-cover" autoplay loop muted playsinline>
+                        <source src="dist/img/portfolio/PredictaCycleVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-primary/90 group-hover:via-primary/80 group-hover:to-dark/90"></div>
                   <div class="absolute inset-0 flex translate-y-[70%] flex-col items-center justify-center px-4 text-center transition-all duration-500 group-hover:translate-y-0">
@@ -398,6 +405,30 @@
             </p> 
           </div>
           <!-- PredictaCycle -->
+
+          <!-- Automatic Colorization -->
+          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
+                  <div class="w-full">
+                      <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/Automatic Colorization.png" alt="Automatic Landscape Colorization using Deep Learning" />
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-primary/90 group-hover:via-primary/80 group-hover:to-dark/90"></div>
+                  <div class="absolute inset-0 flex translate-y-[70%] flex-col items-center justify-center px-4 text-center transition-all duration-500 group-hover:translate-y-0">
+                      <a href="https://colab.research.google.com/drive/1tXaHpmQ1UsZaySUryj5jXtjP6G9Cu22u?usp=sharing" target="_blank">
+                          <button class="rounded-full bg-neutral-900 py-2 px-3 font-com text-sm capitalize text-white shadow shadow-black/60">
+                              Crafted with code—explore!
+                          </button>
+                      </a>
+                  </div>
+              </div>
+            </div>
+            <h3 class="mt-5 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Automatic Image Colorization with U-Net Autoencoder</h3>
+            <p class="mt-4 text-sm sm:text-base font-medium text-secondary text-justify">
+              Bring black-and-white images to life by automatically generating realistic colors using a deep learning model based on the U-Net autoencoder architecture.
+            </p> 
+          </div>
+          <!-- Automatic Colorization -->
 
           <!-- ResBuddy -->
           <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
@@ -426,7 +457,10 @@
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
-                      <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="dist/img/portfolio/superstore dashboard.png" alt="Superstore Dashboard" />
+                      <video id="demoVideo" class="h-full w-full object-cover" autoplay loop muted playsinline>
+                        <source src="dist/img/portfolio/SuperstoreDashboardVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:from-primary/90 group-hover:via-primary/80 group-hover:to-dark/90"></div>
                   <div class="absolute inset-0 flex translate-y-[70%] flex-col items-center justify-center px-4 text-center transition-all duration-500 group-hover:translate-y-0">
@@ -944,6 +978,13 @@
       });
     </script>    
     <!-- Akhir script tab portfolio -->
+
+    <!-- Awal script video predictacycle -->
+    <script>
+      const video = document.getElementById("demoVideo");
+      video.playbackRate = 3;  // set kecepatan 2x
+    </script>
+    <!-- Akhir script video predictacycle -->
 
   </body>
 </html>

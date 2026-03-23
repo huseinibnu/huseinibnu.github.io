@@ -7,7 +7,7 @@
     <title>Husein Ibnu Mahmud</title>
     <link href="dist/css/output.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" href="dist/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" href="dist/img/logo.png" type="image/x-icon">
     <script>
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -15,14 +15,42 @@
         document.documentElement.classList.remove('dark');
       }
     </script>
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
   </head>
   <body>
     <!-- Header Start -->
-    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+    <header class="absolute top-0 left-0 z-50 flex w-full items-center bg-transparent">
       <div class="container">
         <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="block py-6 text-lg font-bold text-primary ml-2 hover:text-black dark:hover:text-white">Husein Ibnu Mahmud</a>
+            <a href="#home" 
+              class="flex items-center gap-3 py-6 text-lg font-bold text-primary 
+                      hover:text-black dark:hover:text-white transition">
+
+              <img src="dist/img/logo.png" 
+                  alt="Husein Ibnu Mahmud"
+                  class="w-9 h-9 rounded-lg object-cover shadow-sm"/>
+
+              <span>
+                Husein Ibnu Mahmud
+              </span>
+
+            </a>
           </div>
 
           <div class="flex items-center px-4">
@@ -50,7 +78,7 @@
                   <a href="#portfolio" class="mx-4 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
                 </li>
                 <li class="group">
-                  <a href="#blog" class="mx-4 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
+                  <a href="#publication" class="mx-4 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Publications</a>
                 </li>
                 <li class="group">
                   <a href="#contact" class="mx-4 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
@@ -76,137 +104,289 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-32 md:pt-16 dark:bg-dark">
+    <section id="home" class="pt-32 md:pt-20 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-down-right" data-aos-duration="1200">
-            <!-- <h1 class="text-base font-semibold text-primary md:text-xl">Hello and Welcome 🙌, I'm <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Husein Ibnu Mahmud</span></h1> -->
-            <h1 class="text-base font-semibold text-primary md:text-xl">
+          <!-- Left (Photo Column) Start -->
+          <div class="w-full mt-4 md:mt-16 lg:w-1/2 flex justify-center items-center">
+
+            <div class="relative w-[260px] h-[300px] sm:w-[300px] sm:h-[360px] lg:w-[320px] lg:h-[380px]">
+
+              <!-- Background Glow Card -->
+              <div class="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl
+                          bg-gradient-to-br from-blue-500/20 to-yellow-400/10
+                          border border-blue-400/20 z-0">
+              </div>
+
+              <!-- Corner Accent (Top Left) -->
+              <div class="absolute -top-3 -left-3 w-14 h-14 border-t-2 border-l-2 border-yellow-400 z-20"></div>
+
+              <!-- Photo Container -->
+              <div class="relative z-10 w-full h-full rounded-2xl overflow-hidden
+                          border border-gray-200 dark:border-gray-700
+                          bg-gray-100 dark:bg-gray-800">
+
+                <img src="dist/img/profile-ibnu.png"
+                    alt="Husein Ibnu Mahmud"
+                    class="w-full h-full object-cover object-top transition duration-500 hover:scale-105" />
+              </div>
+
+              <!-- Corner Accent (Bottom Right) -->
+              <div class="absolute -bottom-3 -right-3 w-12 h-12 border-b-2 border-r-2 border-blue-500 z-20"></div>
+
+              <!-- Status Badge (lebih general & aman) -->
+              <div class="absolute bottom-6 -left-6 z-30
+                          flex items-center gap-2 px-4 py-2 rounded-full
+                          bg-white/80 dark:bg-gray-800/80 backdrop-blur-md
+                          border border-gray-200 dark:border-gray-600
+                          shadow-lg text-xs text-gray-700 dark:text-gray-200">
+
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                Open to Opportunities
+              </div>
+
+              <!-- Experience Badge (versi aman) -->
+              <div class="absolute top-6 -right-6 z-30
+                          px-4 py-2 rounded-xl text-center
+                          bg-gradient-to-br from-blue-500 to-blue-700
+                          text-white shadow-lg">
+
+                <span class="block text-lg font-bold leading-none">Data</span>
+                <span class="text-[10px] opacity-80 uppercase tracking-wide">
+                  Engineer
+                </span>
+              </div>
+
+            </div>
+          </div>
+          <!-- Left (Photo Column) End -->
+
+          <!-- Right (Text Column) Start -->
+          <div class="w-full mt-16 self-center px-4 lg:w-1/2" data-aos="fade-down-right" data-aos-duration="1200">
+            <h1 class="text-sm font-semibold text-[#8A9CC0] md:text-base">
               Hello and Welcome 🙌, I'm 
               <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">
-                <span id="animated-text"></span> <!-- Husein Ibnu Mahmud -->
+                <span>Husein</span> <!-- Husein -->
+              </span>
+              <span class="mt-1 block text-4xl font-bold text-[#64B3F4] lg:text-5xl">
+                <span>Ibnu Mahmud</span> <!-- Ibnu Mahmud -->
               </span>
             </h1>
             
-            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
-              <span class="text-dark dark:text-white">
-                <span id="animated-subtitle"></span> <!-- Computer Science Student | Exploring Data Science and Artificial Intelligence -->
-              </span>
-            </h2>
+            <!-- Role / Typewriter -->
+            <div class="flex items-center gap-2 mb-6 opacity-0 animate-[fadeUp_.7s_ease_.95s_forwards]">
+
+              <!-- Dot -->
+              <div class="w-1.5 h-1.5 rounded-full bg-yellow-400"></div>
+
+              <!-- Text -->
+              <p class="text-sm md:text-base font-medium min-h-[24px] bg-gradient-to-r from-[#64B3F4] to-blue-500 bg-clip-text text-transparent">
+                <span id="hero-typed-role"></span>
+                <span class="inline-block w-[2px] h-[1em] ml-1 bg-blue-500 animate-[blink_1s_step-end_infinite] "></span>
+              </p>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="w-30 h-[2px] bg-gradient-to-r from-yellow-400 to-transparent mb-6 
+                        opacity-0 animate-[fadeUp_.7s_ease_1.05s_forwards]">
+            </div>
             
-            <p class="mb-10 font-medium leading-relaxed text-secondary">
-              <span class="font-bold text-dark dark:text-white">
-                <span id="animated-description"></span> <!-- Unlocking the Power of Data to Drive Innovation -->
+            <p class="mb-10 max-w-xl text-sm md:text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              <span class="block font-semibold text-gray-800 dark:text-white">
+                <span id="animated-description-1"></span>
+              </span>
+
+              <span class="block mt-2">
+                <span id="animated-description-2"></span>
               </span>
             </p>
             
-            <a href="#contact" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Contact Me</a>
-          </div>
-          <div class="w-full mt-8 self-end px-4 lg:w-1/2" data-aos="fade-down-left" data-aos-duration="1200">
-            <div class="relative sm:py-8 lg:right-0 lg:mt-2">
-                <img src="dist/img/ibnu.png" width="400" height="400" alt="Husein Ibnu Mahmud" class="relative z-10 mx-auto max-w-full" style="margin-top: 50px;" />
+            <!-- CTA Buttons -->
+            <div class="flex items-center gap-4 flex-wrap mt-6">
+
+              <!-- Primary Button -->
+              <a href="#contact" class="inline-flex items-center gap-2 px-8 py-3 rounded-full 
+                                        bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold 
+                                        text-sm shadow-lg shadow-blue-400/40 transition duration-300 ease-in-out 
+                                        hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50">
+                Contact Me
+                <span class="w-5 h-5 flex items-center justify-center rounded-full bg-white/20 text-xs">
+                  ↗
+                </span>
+              </a>
+
+              <!-- Secondary Button -->
+              <a href="#portfolio" class="inline-flex items-center gap-2 px-7 py-3 rounded-full
+                        border-2 border-blue-500
+                        text-gray-700 dark:text-gray-200 font-medium text-sm
+                        transition-all duration-300 ease-in-out
+                        hover:-translate-y-1 hover:border-blue-500 hover:border-2
+                        hover:shadow-md hover:shadow-blue-300">
+                View Projects
+              </a>
+
             </div>
-        </div>
+            
+          </div>
+          <!-- Right (Text Column) End -->
+
         </div>
       </div>
     </section>
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-32 md:pt-16 pb-32 dark:bg-dark">
+    <section id="about" class="pt-32 pb-16 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
+
           <div class="mb-10 w-full px-4 lg:w-1/2" data-aos="fade-up" data-aos-duration="1200">
-            <h4 class="mb-3 text-xl font-bold uppercase text-primary">About Me</h4>
-            <!-- <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Mari Berkenalan</h2> -->
-            <p class="max-w-xl justify-center text-base font-medium text-secondary lg:text-lg justify-self-auto">I specialize in developing deep learning models for real-world applications. Throughout my academic journey, I’ve explored 
+            <h1 class="text-sm font-semibold text-[#8A9CC0] md:text-base">
+              About Me
+              <span class="mt-1 block text-2xl font-bold text-dark dark:text-white lg:text-3xl">
+                <span>Turning Data into</span>
+              </span>
+              <span class="mt-1 block text-2xl font-bold text-[#64B3F4] lg:text-3xl">
+                <span>Decisions that Matter</span>
+              </span>
+            </h1>
+            
+            <p class="max-w-xl text-justify text-sm md:text-base font-medium text-gray-500 dark:text-gray-400">I focus on building data-driven solutions and exploring deep learning for real-world applications. Throughout my journey, I’ve worked with  
               <span class=" dark:text-gray-300 font-semibold">Python</span>, 
               <span class=" dark:text-gray-300 font-semibold">Data Science</span>, and 
               <span class=" dark:text-gray-300 font-semibold">Artificial Intelligence</span> 
-              by building projects that bridge research and practical impact — from data preprocessing and model optimization to explainable AI visualization.
+               — developing projects that connect theory with practical use. From data preprocessing and model optimization to explainable AI,
 
-              I’m currently seeking opportunities to apply my expertise as an 
+              I aim to transform data into meaningful insights that support better decision-making. Currently seeking opportunities as an 
               <span class=" dark:text-gray-300 font-semibold">AI Engineer</span>, 
-              <span class=" dark:text-gray-300 font-semibold">Machine Learning Engineer</span>, 
               <span class=" dark:text-gray-300 font-semibold">Data Analyst</span>, or 
               <span class=" dark:text-gray-300 font-semibold">Data Scientist</span>.
             </p>
           </div>
+
           <div class="w-full px-4 lg:w-1/2" data-aos="fade-up" data-aos-duration="1200">
-            <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Let’s collaborate!</h3>
-            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
-              Create something impactful together! Thank you for visiting my portfolio, and Feel free to connect or reach out if you’re interested in collaboration or have exciting opportunities.
-            </p>
-            <div class="flex items-center">
+            <div class="relative p-6 rounded-2xl bg-white dark:bg-[#161F35] border border-gray-200 dark:border-blue-400/20 shadow-md dark:shadow-none overflow-hidden">
+              <!-- Glow effect -->
+              <div class="absolute -top-10 -right-10 w-36 h-36 bg-blue-500/10 rounded-full blur-2xl pointer-events-none">
+              </div>
 
-              <!-- Instagram -->
-              <a
-                href="https://instagram.com/mahmudhuseinibnu"
-                target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-              >
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <title>Instagram</title>
-                  <path
-                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
-                  />
-                </svg>
-              </a>
+              <!-- Status Badge -->
+              <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-4 rounded-full text-xs font-medium bg-green-100 text-green-700 dark:bg-green-500/10 dark:text-green-400">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                Open to Opportunities
+              </div>
 
-              <!-- LinkedIn -->
-              <a
-                href="https://linkedin.com/in/husein-ibnu-mahmud"
-                target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-              >
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <title>LinkedIn</title>
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
+              <!-- Title -->
+              <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white pt-2 lg:text-3xl">
+                Let’s collaborate! 🤝
+              </h3>
 
-              <!-- Email -->
-              <a
-                href="mailto:husein.mahmud03@gmail.com"
-                target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-              >
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <title>Gmail</title>
-                  <path 
-                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
-                  />
-                </svg>
-              </a>
+              <!-- Description -->
+              <p class="mb-6 text-sm md:text-base text-justify font-medium text-gray-500 dark:text-gray-400">
+                Create something impactful together! Thank you for visiting my portfolio. I'm always open to exciting opportunities, collaborations, or just a conversation about data and AI. Feel free to reach out!
+              </p>
 
-              <!-- Github -->
-              <a
-                href="https://github.com/huseinibnu/"
-                target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-              >
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <title>GitHub</title>
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                </svg>
-              </a>
+              <!-- Social Media -->
+              <div class="flex items-center">
+                <!-- Instagram -->
+                <a 
+                  href="https://instagram.com/mahmudhuseinibnu"
+                  target="_blank"
+                  rel="noopener"
+                  class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                        border border-secondary dark:border-slate-300
+                        text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out
+                        hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                        hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
+                  <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Instagram</title>
+                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                  </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a 
+                  href="https://linkedin.com/in/husein-ibnu-mahmud"
+                  target="_blank"
+                  rel="noopener"
+                  class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                        border border-secondary dark:border-slate-300
+                        text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out
+                        hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                        hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
+                  <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>LinkedIn</title>
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </a>
+
+                <!-- Email -->
+                <a 
+                  href="mailto:husein.mahmud03@gmail.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                        border border-secondary dark:border-slate-300
+                        text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out
+                        hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                        hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
+                  <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Gmail</title>
+                    <path 
+                      d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                    />
+                  </svg>
+                </a>
+
+                <!-- Github -->
+                <a 
+                  href="https://github.com/huseinibnu/"
+                  target="_blank"
+                  rel="noopener"
+                  class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                        border border-secondary dark:border-slate-300
+                        text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out
+                        hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                        hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
+                  <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>GitHub</title>
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                  </svg>
+                </a>
+
+              </div>
 
             </div>
           </div>
+
         </div>
       </div>
     </section>
     <!-- About Section End -->
 
     <!-- Skills Section Start -->
-    <section id="skills" class="bg-slate-800 pt-24 pb-24 dark:bg-slate-300">
+    <section id="skills" class="bg-slate-800 pt-20 pb-20 dark:bg-slate-300">
       <div class="container">
+        <!-- Skills (Text) -->
         <div class="w-full px-4">
-          <div class="mx-auto mb-16 text-center">
-            <h3 class="mb-2 text-xl font-semibold text-primary">Core Skills</h3>
-            <h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl">Python | Java | JavaScript | SQL | BI Tools</h2>
+          <div class="mx-auto mb-8 text-center">
+            <h1 class="text-sm font-semibold text-[#8A9CC0] md:text-base">
+              Technical Skills
+              <span class="mt-1 block text-2xl font-bold text-white dark:text-dark lg:text-3xl">
+                <span>From data wrangling to model deployment</span>
+              </span>
+              <span class="mt-1 block text-2xl font-bold text-[#64B3F4] lg:text-3xl">
+                <span>Python | Java | JavaScript | SQL | BI Tools</span>
+              </span>
+            </h1>
+          
             <br>
             <ul class="text-md font-medium text-secondary md:text-lg">
               <li><b>Programming</b>: Python (Pandas, NumPy, Flask, OpenCV), SQL, Java, JavaScript (HTML, CSS)</li>
@@ -217,31 +397,32 @@
             </ul>
           </div>
         </div>
-
-        <div class="w-full px-2">
+        
+        <!-- Skills (Image) -->
+        <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
-            <!-- <a href="#" class="mx-3 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
-              <img src="dist/img/skills/sql.svg" alt="SQL" />
-            </a> -->
-            <a href="#" class="skills mx-3 max-w-[120px]  lg:mx-6 xl:mx-8">
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
               <img src="dist/img/skills/python.svg" alt="Python" />
             </a>
-            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
               <img src="dist/img/skills/sql.svg" alt="SQL" class="h-12"/>
             </a>
-            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
               <img src="dist/img/skills/tensorflow.svg" alt="TensorFlow" />
             </a>
-            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
               <img src="dist/img/skills/pytorch.svg" alt="PyTorch"/>
             </a>
-            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
               <img src="dist/img/skills/tableau.svg" alt="Tableau" />
             </a>
-            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
-              <img src="dist/img/skills/looker.svg" alt="Looker Studio" />
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
+              <img src="dist/img/skills/looker_studio.svg" alt="Looker Studio" />
             </a>
-            <a href="#" class="skills mx-3 max-w-[120px] py-4 lg:mx-6 xl:mx-8">
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
+              <img src="dist/img/skills/google_big_query_wo_bg.png" alt="Google Big Query" />
+            </a>
+            <a href="#" class="skills mx-3 max-w-[100px] lg:mx-6">
               <img src="dist/img/skills/power_bi.svg" alt="Power BI"/>
             </a>
           </div>
@@ -251,15 +432,21 @@
     <!-- Skills Section End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="bg-slate-100 pt-24 pb-16 dark:bg-slate-800">
+    <section id="portfolio" class="bg-slate-100 pt-16 pb-16 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-12 max-w-xl text-center">
-            <h4 class="mb-2 text-xl font-semibold text-primary">Portfolio</h4>
-            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Latest Project</h2>
-            <!-- <p class="text-md font-medium text-secondary md:text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus porro consequuntur alias, commodi nemo enim aliquam ipsam obcaecati? Assumenda, ipsam?
-            </p> -->
+            <h1 class="text-sm font-semibold text-[#8A9CC0] md:text-base">
+              Portfolio
+              <span class="mt-1 block text-2xl font-bold text-dark dark:text-white lg:text-3xl">
+                <span>Selected Work</span>
+              </span>
+              <span class="mt-1 block text-2xl font-bold text-[#64B3F4] lg:text-3xl">
+                <span>Latest Project</span>
+              </span>
+            </h1>
+            
+            <br>
             <div class="mb-6">
               <div class="bg-slate-300 rounded-[25px] text-sm sm:text-base font-medium grid grid-cols-2 sm:flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 w-full sm:w-fit mx-auto p-3 sm:p-0" id="portfolio-tabs">
                 <button class="tab-btn active text-dark hover:text-white hover:bg-gray-500 px-4 py-2 rounded-full transition" data-tab="all">All</button>
@@ -274,7 +461,7 @@
 
         <div class="flex w-full flex-wrap justify-center px-2 xl:mx-auto xl:w-15/16">  
           <!-- Vehicle Detection and Counting -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml da">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full aspect-video ">
@@ -300,7 +487,7 @@
             </div>
 
             <!-- Judul -->
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Accelerated Vehicle Detection with OpenVINO</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Accelerated Vehicle Detection with OpenVINO</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -319,14 +506,14 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">
               Optimized inference of YOLOv11 for real-time vehicle detection and counting, achieving up to 3× faster performance on CPU and GPU compared to baseline models.
             </p> 
           </div>
           <!-- Vehicle Detection and Counting -->
           
           <!-- Cohort Analysis -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -343,7 +530,7 @@
               </div>
             </div>
             <!-- Judul -->
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Cohort-Based Insights on Customer Loyalty</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Cohort-Based Insights on Customer Loyalty</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -362,14 +549,14 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">
               Understand customer behavior over time through cohort-based retention analysis segmented by join month, quarter, and initial purchase activity. Use these insights to improve customer loyalty and long-term value.
             </p> 
           </div>
           <!-- Cohort Analysis -->
           
           <!-- RFM Analysis -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -385,7 +572,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-5 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Know Your Shoppers: An RFM-Based Customer Intelligence</h3>
+            <h3 class="mt-5 mb-3 text-lg font-semibold text-dark dark:text-white">Know Your Shoppers: An RFM-Based Customer Intelligence</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -407,14 +594,14 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-4 text-sm sm:text-base font-medium text-secondary text-justify">
+            <p class="mt-4 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">
               Understand your customers better through RFM analysis to segment, target, and retain high-value users effectively.
             </p> 
           </div>
           <!-- RFM Analysis -->
           
           <!-- Market Basket Analysis -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -430,7 +617,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Product Recommendation with Market Basket Analysis</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Product Recommendation with Market Basket Analysis</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -452,14 +639,14 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">
               Boost product sales by uncovering hidden purchase patterns and recommending items based on customer buying behavior using Market Basket Analysis.
             </p> 
           </div>
           <!-- Market Basket Analysis -->
 
           <!-- PredictaCycle -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml da">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full aspect-video ">
@@ -483,7 +670,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">PredictaCycle</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">PredictaCycle</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -505,7 +692,7 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">
               PredictaCycle transforms Windows battery reports into actionable insights, helping users understand usage trends, 
               capacity decline, and predict future performance with data analysis and machine learning.
             </p> 
@@ -513,7 +700,7 @@
           <!-- PredictaCycle -->
 
           <!-- Automatic Colorization -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -529,7 +716,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Automatic Image Colorization with U-Net Autoencoder</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Automatic Image Colorization with U-Net Autoencoder</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -551,14 +738,14 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">
               Bring black-and-white images to life by automatically generating realistic colors using a deep learning model based on the U-Net autoencoder architecture.
             </p> 
           </div>
           <!-- Automatic Colorization -->
 
           <!-- ResBuddy -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full aspect-video ">
@@ -582,7 +769,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">ResBuddy</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">ResBuddy</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -604,12 +791,12 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">ResBuddy is an AI research assistant that extracts key insights from academic papers using RAG, DeepSeek-R1:1.5B, nomic-embed-text, ChromaDB and Streamlit, providing context-aware responses in an intuitive interface.</p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">ResBuddy is an AI research assistant that extracts key insights from academic papers using RAG, DeepSeek-R1:1.5B, nomic-embed-text, ChromaDB and Streamlit, providing context-aware responses in an intuitive interface.</p>
           </div>
           <!-- ResBuddy -->
           
           <!-- Superstore Dashboard -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard da">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard da">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full aspect-video ">
@@ -633,7 +820,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Superstore Dashboard</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Superstore Dashboard</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -649,12 +836,12 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">Boost Superstore sales with data-driven insights! This dashboard analyzes USA supermarket sales (2021-2022) through Overview (key metrics & trends), Product (profitability & efficiency), and Customer (segmentation & buying patterns).</p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">Boost Superstore sales with data-driven insights! This dashboard analyzes USA supermarket sales (2021-2022) through Overview (key metrics & trends), Product (profitability & efficiency), and Customer (segmentation & buying patterns).</p>
           </div>
           <!-- Superstore Dashboard -->
           
           <!-- DEDEL -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full aspect-video ">
@@ -678,7 +865,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">DEDEL (Deteksi Dini Elektronik)</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">DEDEL (Deteksi Dini Elektronik)</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -703,12 +890,12 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">Curious about your child's height at age 5? Try DEDEL, a machine learning-based prediction tool. It also offers resources on complementary feeding (MPASI) to raise awareness about stunting.</p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">Curious about your child's height at age 5? Try DEDEL, a machine learning-based prediction tool. It also offers resources on complementary feeding (MPASI) to raise awareness about stunting.</p>
           </div>
           <!-- DEDEL -->
 
           <!-- Churn Prediction Dashboard -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml dashboard">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full aspect-video ">
@@ -732,7 +919,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Churn Prediction Dashboard</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Churn Prediction Dashboard</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -748,12 +935,12 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">Maximize your company's profits by identifying potential churn early and taking action to retain valuable customers. <b>Created by Arunika's Team</b></p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">Maximize your company's profits by identifying potential churn early and taking action to retain valuable customers. <b>Created by Arunika's Team</b></p>
           </div>
           <!-- Churn Prediction Dashboard -->
 
           <!-- Report -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -769,7 +956,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Market Transaction Report</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Market Transaction Report</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -785,12 +972,12 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">Are you curious about analyzing key data and buyer trends in a market? This Market Transaction Report offering a comprehensive view of the market's performance.</p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">Are you curious about analyzing key data and buyer trends in a market? This Market Transaction Report offering a comprehensive view of the market's performance.</p>
           </div>
           <!-- Report -->
 
           <!-- Fishio -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="ml">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -806,7 +993,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Fishio</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Fishio</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -822,12 +1009,12 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">Confused about selecting fresh fish? Fishio can help! Simply take a photo of the fish's eye, and Fishio will determine its freshness. <b>Created by Depresso Squad</b></p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">Confused about selecting fresh fish? Fishio can help! Simply take a photo of the fish's eye, and Fishio will determine its freshness. <b>Created by Depresso Squad</b></p>
           </div>
           <!-- Fishio -->
 
           <!-- Produksi Beras -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -843,7 +1030,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Indonesia's Rice Supply and Production</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Indonesia's Rice Supply and Production</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -859,12 +1046,12 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">Explore how we meet national food needs through an interactive map showcasing rice imports and production.</p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">Explore how we meet national food needs through an interactive map showcasing rice imports and production.</p>
           </div>
           <!-- Produksi Beras -->
 
           <!-- Heart Disease -->
-          <div class="portfolio-item mb-12 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
+          <div class="portfolio-item mb-8 p-4 w-full md:w-1/3 lg:w-1/5" data-category="dashboard">
             <div class="overflow-hidden rounded-md shadow-md">
               <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-primary/30">
                   <div class="w-full">
@@ -880,7 +1067,7 @@
                   </div>
               </div>
             </div>
-            <h3 class="mt-3 mb-3 text-lg sm:text-xl font-semibold text-dark dark:text-white">Heart Disease Analysis Dashboard</h3>
+            <h3 class="mt-3 mb-3 text-lg font-semibold text-dark dark:text-white">Heart Disease Analysis Dashboard</h3>
             
             <!-- Teknologi yang digunakan -->
             <div class="flex flex-wrap gap-2 mb-3">
@@ -896,7 +1083,7 @@
             </div>
 
             <!-- Deskripsi proyek -->
-            <p class="mt-3 text-sm sm:text-base font-medium text-secondary text-justify">Explore the heart disease dashboard, which offers detailed insights into heart disease. The dashboard presents key data and trends, helping you analyze risk factors and patterns for better understanding and prevention.</p>
+            <p class="mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 text-justify">Explore the heart disease dashboard, which offers detailed insights into heart disease. The dashboard presents key data and trends, helping you analyze risk factors and patterns for better understanding and prevention.</p>
           </div>
           <!-- Heart Disease -->
           
@@ -905,27 +1092,32 @@
     </section>
     <!-- Portfolio Section End -->
 
-    <!-- Blog Section Start -->
-    <section id="blog" class="bg-slate-100 pt-24 pb-16 dark:bg-dark">
+    <!-- Publication Section Start -->
+    <section id="publication" class="bg-slate-100 pt-16 pb-16 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-xl font-semibold text-primary">Publications & Blog</h4>
-            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Latest Posts</h2>
-            <!-- <p class="text-md font-medium text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quisquam perspiciatis blanditiis dolores?</p> -->
+          <div class="mx-auto mb-12 max-w-xl text-center">
+            <h1 class="text-sm font-semibold text-[#8A9CC0] md:text-base">
+              Publications & Blog
+              <span class="mt-1 block text-2xl font-bold text-dark dark:text-white lg:text-3xl">
+                <span>Insights & Articles</span>
+              </span>
+              <span class="mt-1 block text-2xl font-bold text-[#64B3F4] lg:text-3xl">
+                <span>Latest Posts</span>
+              </span>
+            </h1>
           </div>
         </div>
 
         <div class="flex flex-wrap">
-
           <div class="blog-item w-full px-4 lg:w-1/2 xl:w-1/4">
             <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
               <img src="dist/img/blog/Theses.png" alt="Report" class="w-full" />
               <div class="py-8 px-6">
-                <h3 class="mb-3 block text-xl font-semibold text-dark hover:text-primary dark:text-white">
+                <h3 class="mb-3 block text-base font-semibold text-dark hover:text-primary dark:text-white">
                   Application of Deep Learning for The Classification of Valvular Heart Diseases in Doppler Echocardiography Videos
                 </h3>
-                <p class="mb-6 text-base font-medium text-secondary">Published in: Repositori Institusi Universitas Sumatera Utara - 2025.</p>
+                <p class="mb-6 text-sm font-medium text-gray-500 dark:text-gray-400">Published in: Repositori Institusi Universitas Sumatera Utara - 2025.</p>
                 <a href="https://repositori.usu.ac.id/handle/123456789/105892" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Read More...</a>
               </div>
             </div>
@@ -935,10 +1127,10 @@
             <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
               <img src="dist/img/blog/IEEE Paper.png" alt="Fishio" class="w-full" />
               <div class="py-8 px-6">
-                <h3 class="mb-3 block text-xl font-semibold text-dark hover:text-primary dark:text-white">
+                <h3 class="mb-3 block text-base font-semibold text-dark hover:text-primary dark:text-white">
                   Leveraging Machine Learning Techniques for Stunting Detection and Height Growth Prediction in Children Aged 0-5 Years
                 </h3>
-                <p class="mb-6 text-base font-medium text-secondary">Published in: 2024 8th International Conference on Electrical, Telecommunication and Computer Engineering (ELTICOM).</p>
+                <p class="mb-6 text-sm font-medium text-gray-500 dark:text-gray-400">Published in: 2024 8th International Conference on Electrical, Telecommunication and Computer Engineering (ELTICOM).</p>
                 <a href="10.1109/ELTICOM64085.2024.10864967" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Read More...</a>
               </div>
             </div>
@@ -948,10 +1140,10 @@
             <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
               <img src="dist\img\blog\Jurnal PKM.png" alt="Jurnal PKM" class="w-full" />
               <div class="py-8 px-6">
-                <h3 class="mb-3 block text-xl font-semibold text-dark hover:text-primary dark:text-white">
+                <h3 class="mb-3 block text-base font-semibold text-dark hover:text-primary dark:text-white">
                   Pengaruh Deteksi Dini Elektronik (DEDEL) Terhadap Pengatahuan dan Sikap Ibu Dalam Pencegahan Stunting
                 </h3>
-                <p class="mb-6 text-base font-medium text-secondary">Published in: Jurnal Pengabdian Masyarakat Gizi Pontianak.</p>
+                <p class="mb-6 text-sm font-medium text-gray-500 dark:text-gray-400">Published in: Jurnal Pengabdian Masyarakat Gizi Pontianak.</p>
                 <a target="_blank" href="https://ejournal.poltekkes-pontianak.ac.id/index.php/JGP/article/view/1536" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Read More...</a>
               </div>
             </div>
@@ -961,10 +1153,10 @@
             <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
               <img src="dist\img\blog\heart.png" alt="From Data to Insight" class="w-full" />
               <div class="py-8 px-6">
-                <h3 class="mb-3 block text-xl font-semibold text-dark hover:text-primary dark:text-white">
+                <h3 class="mb-3 block text-base font-semibold text-dark hover:text-primary dark:text-white">
                   From Data to Insight: The Art of Data Science
                 </h3>
-                <p class="mb-6 text-base font-medium text-secondary">Heart Disease Risk Prediction: A Crucial Step for Future Prevention.</p>
+                <p class="mb-6 text-sm font-medium text-gray-500 dark:text-gray-400">Heart Disease Risk Prediction: A Crucial Step for Future Prevention.</p>
                 <a target="_blank" href="https://medium.com/@huseinmahmud03/from-data-to-insight-the-art-of-data-science-e1e1b25dde95" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Read More...</a>
               </div>
             </div>
@@ -973,16 +1165,22 @@
         </div>
       </div>
     </section>
-    <!-- Blog Section End -->
+    <!-- Publication Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-24 pb-16 dark:bg-slate-800">
+    <section id="contact" class="pt-16 pb-16 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-xl font-semibold text-primary">Contact</h4>
-            <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Contact Me</h2>
-            <!-- <p class="text-md font-medium text-secondary md:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, sed.</p> -->
+          <div class="mx-auto mb-12 max-w-xl text-center">
+            <h1 class="text-sm font-semibold text-[#8A9CC0] md:text-base">
+              Contact
+              <span class="mt-1 block text-2xl font-bold text-dark dark:text-white lg:text-3xl">
+                <span>Let’s Connect</span>
+              </span>
+              <span class="mt-1 block text-2xl font-bold text-[#64B3F4] lg:text-3xl">
+                <span>Contact Me</span>
+              </span>
+            </h1>
           </div>
         </div>
 
@@ -992,23 +1190,28 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-3 inline h-4 w-4 flex-shrink-0" viewBox="0 0 16 16">
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
               </svg>
-              <div><span class="font-extrabold">Terima Kasih!!!</span>  Pesan anda sudah kami terima.</div>
+              <div><span class="font-extrabold">Thank you very much!!!</span>  We have received your message.</div>
             </div>
             <div class="mb-8 w-full px-4">
-              <label for="name" class="text-base font-bold text-primary">Nama</label>
-              <input type="text" id="name" name="nama" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              <label for="name" class="text-base font-bold text-primary">Name</label>
+              <input type="text" placeholder="e.g. Husein Ibnu Mahmud" id="name" name="nama" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
             <div class="mb-8 w-full px-4">
-              <label for="email" class="text-base font-bold text-primary">Email</label>
-              <input type="email" id="email" name="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              <label for="email" class="text-base font-bold text-primary">Email Address</label>
+              <input type="email" placeholder="husein.mahmud03@gmail.com" id="email" name="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
             <div class="mb-8 w-full px-4">
-              <label for="message" class="text-base font-bold text-primary">Pesan</label>
-              <textarea type="email" id="email" name="pesan" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+              <label for="message" class="text-base font-bold text-primary">Message</label>
+              <textarea type="email" placeholder="Hi Husein, I'd love to discuss..." id="email" name="pesan" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
             </div>
-            <div class="w-full px-4">
-              <button type="submit" class="btn-kirim w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Kirim</button>
-              <button type="submit" class="btn-loading w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hidden" disabled>
+            <div class="w-full px-4 flex justify-center">
+              <button type="submit" class="btn-kirim w-full md:w-1/2 inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-base font-semibold text-white shadow-lg shadow-blue-400/40 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50">
+                Send Message
+                <span class="w-5 h-5 flex items-center justify-center rounded-full bg-white/20 text-xs">
+                  ↗
+                </span>
+              </button> 
+              <button type="submit" class="btn-loading w-full md:w-1/2 hidden items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-base font-semibold text-white shadow-lg shadow-blue-400/40" disabled>
                 <svg class="animate-spin h-5 w-5 mr-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.964 7.964 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -1023,102 +1226,171 @@
     <!-- Contact Section End -->
 
     <!-- Footer Start -->
-    <footer class="bg-dark pt-24 pb-12">
+    <footer class="bg-dark border-t border-blue-400/20 pt-16 pb-8 relative overflow-hidden">
+      <!-- subtle glow line -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+
       <div class="container">
-        <div class="flex flex-wrap justify-center text-center">
-          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/2">
-            <h2 class="mb-5 text-3xl font-bold text-white">Husein Ibnu Mahmud</h2>
-            <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
-            <p>husein.mahmud03@gmail.com</p>
-            <p>Medan, Indonesia</p>
-          </div>
-          <div class="mb-12 w-full px-4 md:w-1/2">
-            <h3 class="mb-5 text-xl font-semibold text-white">Links</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Home</a>
-              </li>
-              <li>
-                <a href="#about" class="mb-3 inline-block text-base hover:text-primary">About Me</a>
-              </li>
-              <li>
-                <a href="#skills" class="mb-3 inline-block text-base hover:text-primary">Skills</a>
-              </li>
-              <li>
-                <a href="#portfolio" class="mb-3 inline-block text-base hover:text-primary">Portfolio</a>
-              </li>
-              <li>
-                <a href="#blog" class="mb-3 inline-block text-base hover:text-primary">Blog</a>
-              </li>
-              <li>
-                <a href="#contact" class="mb-3 inline-block text-base hover:text-primary">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12 items-center justify-items-center">
 
-        <div class="w-full border-t border-slate-700 pt-10">
-          <div class="mb-5 flex items-center justify-center">
-            <!-- Instagram -->
-            <a
-            href="https://instagram.com/mahmudhuseinibnu"
-            target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-          >
-            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>Instagram</title>
-              <path
-                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
-              />
-            </svg>
-          </a>
+          <!-- LEFT: LOGO -->
+          <div class="text-center">
 
-          <!-- LinkedIn -->
-          <a
-            href="https://linkedin.com/in/husein-ibnu-mahmud"
-            target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-          >
-            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>LinkedIn</title>
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-              />
-            </svg>
-          </a>
+            <!-- Logo -->
+            <div class="flex items-center justify-center gap-3 mb-3">
+              <img src="dist/img/logo.png" 
+                  alt="Husein Ibnu Mahmud"
+                  class="w-10 h-10 rounded-lg object-cover shadow-md"/>
+              <span class="text-lg font-extrabold text-primary">
+                Husein Ibnu Mahmud
+              </span>
+            </div>
 
-          <!-- Email -->
-          <a
-            href="mailto:husein.mahmud03@gmail.com"
-            target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-          >
-            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>Gmail</title>
-              <path 
-                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
-              />
-            </svg>
-          </a>
+            <!-- Tagline -->
+            <p class="text-sm text-gray-400 max-w-sm mx-auto md:mx-0 leading-relaxed mb-6">
+              Data Engineer & AI Enthusiast — Building data-driven solutions that turn raw data into meaningful impact.
+            </p>
 
-          <!-- Github -->
-              <a
+            <!-- Social -->
+            <div class="flex justify-center gap-3">
+              <!-- Instagram -->
+              <a 
+                href="https://instagram.com/mahmudhuseinibnu"
+                target="_blank"
+                rel="noopener"
+                class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                      border border-slate-300 dark:border-slate-300
+                      text-slate-300 dark:text-gray-300 transition-all duration-300 ease-in-out
+                      hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                      hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a 
+                href="https://linkedin.com/in/husein-ibnu-mahmud"
+                target="_blank"
+                rel="noopener"
+                class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                      border border-slate-300 dark:border-slate-300
+                      text-slate-300 dark:text-gray-300 transition-all duration-300 ease-in-out
+                      hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                      hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Email -->
+              <a 
+                href="mailto:husein.mahmud03@gmail.com"
+                target="_blank"
+                rel="noopener"
+                class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                      border border-slate-300 dark:border-slate-300
+                      text-slate-300 dark:text-gray-300 transition-all duration-300 ease-in-out
+                      hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                      hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Gmail</title>
+                  <path 
+                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Github -->
+              <a 
                 href="https://github.com/huseinibnu/"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary dark:border-slate-300 text-secondary dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-              >
+                rel="noopener"
+                class="mr-3 flex items-center justify-center w-10 h-10 rounded-full
+                      border border-slate-300 dark:border-slate-300
+                      text-slate-300 dark:text-gray-300 transition-all duration-300 ease-in-out
+                      hover:-translate-y-1 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600
+                      hover:text-white dark:hover:text-gray-950 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+
                 <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>GitHub</title>
                   <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                 </svg>
               </a>
-
+            </div>
           </div>
-          <p class="text-center text-xs font-medium text-slate-500">
-            Dibuat oleh <a href="https://instagram.com/mahmudhuseinibnu" target="_blank" class="font-bold text-primary">Husein Ibnu Mahmud</a>, menggunakan
-            <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>.
+
+          <!-- RIGHT: NAVIGATION -->
+          <div class="text-center">
+
+            <h3 class="font-bold text-white mb-5">
+              Navigation
+            </h3>
+
+            <ul class="space-y-3 text-gray-400">
+
+              <li>
+                <a href="#home" class="flex items-center justify-center gap-2 hover:text-blue-400 transition">
+                  <span class="w-1 h-1 rounded-full bg-blue-400/40"></span>
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="#about" class="flex items-center justify-center gap-2 hover:text-blue-400 transition">
+                  <span class="w-1 h-1 rounded-full bg-blue-400/40"></span>
+                  About Me
+                </a>
+              </li>
+
+              <li>
+                <a href="#skills" class="flex items-center justify-center gap-2 hover:text-blue-400 transition">
+                  <span class="w-1 h-1 rounded-full bg-blue-400/40"></span>
+                  Skills
+                </a>
+              </li>
+
+              <li>
+                <a href="#portfolio" class="flex items-center justify-center gap-2 hover:text-blue-400 transition">
+                  <span class="w-1 h-1 rounded-full bg-blue-400/40"></span>
+                  Portfolio
+                </a>
+              </li>
+
+              <li>
+                <a href="#publication" class="flex items-center justify-center gap-2 hover:text-blue-400 transition">
+                  <span class="w-1 h-1 rounded-full bg-blue-400/40"></span>
+                  Publications
+                </a>
+              </li>
+
+              <li>
+                <a href="#contact" class="flex items-center justify-center gap-2 hover:text-blue-400 transition">
+                  <span class="w-1 h-1 rounded-full bg-blue-400/40"></span>
+                  Contact
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="border-t border-blue-400/10 pt-6 text-center">
+          <p class="text-sm text-gray-400">
+            © 2026 Husein Ibnu Mahmud. All rights reserved.
           </p>
         </div>
+
       </div>
     </footer>
     <!-- Footer End -->
@@ -1128,6 +1400,7 @@
       <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
     </a>
     <!-- Back to top End -->
+
 
     <script src="dist/js/script.js"></script>
 
@@ -1226,11 +1499,9 @@
       document.addEventListener("DOMContentLoaded", function () {
         let tl = gsap.timeline(); // Timeline GSAP untuk animasi berurutan
         
-        tl.call(() => scrambleTextEffect(document.getElementById("animated-text"), "Husein Ibnu Mahmud", 1))
+        tl.call(() => scrambleTextEffect(document.getElementById("animated-description-1"), "Unlocking the Power of Data to Drive Innovation", 3))
           .to({}, { duration: 1 }) // Tunggu sebentar sebelum lanjut
-          .call(() => scrambleTextEffect(document.getElementById("animated-subtitle"), "Computer Science Student | Exploring Data Science and Artificial Intelligence", 2))
-          .to({}, { duration: 1 }) // Tunggu sebentar sebelum lanjut
-          .call(() => scrambleTextEffect(document.getElementById("animated-description"), "Unlocking the Power of Data to Drive Innovation", 3));
+          .call(() => scrambleTextEffect(document.getElementById("animated-description-2"), "Transforming raw data into meaningful insights — bridging data engineering and data science to build impactful solutions.", 3));
       });
     </script>    
     <!-- Akhir script gsap -->
@@ -1288,6 +1559,47 @@
       video.playbackRate = 3;  // set kecepatan 2x
     </script>
     <!-- Akhir script video predictacycle -->
+    
+    <!-- Awal script hero animation -->
+    <script>
+      const roles = [
+        "Data Engineer   ",
+        "Computer Science Graduate   ",
+        "Building Scalable Data Pipelines   ",
+        "Turning Data into Insights   ",
+        "Exploring Data Science & AI   "
+      ];
 
+      let i = 0;
+      let j = 0;
+      let currentText = "";
+      let isDeleting = false;
+
+      function typeEffect() {
+        const fullText = roles[i];
+
+        if (isDeleting) {
+          currentText = fullText.substring(0, j--);
+        } else {
+          currentText = fullText.substring(0, j++);
+        }
+
+        document.getElementById("hero-typed-role").textContent = currentText;
+
+        if (!isDeleting && j === fullText.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1200);
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % roles.length;
+          setTimeout(typeEffect, 300);
+        } else {
+          setTimeout(typeEffect, isDeleting ? 40 : 70);
+        }
+      }
+
+      typeEffect();
+    </script>
+    <!-- Akhir script hero animation -->
   </body>
 </html>
